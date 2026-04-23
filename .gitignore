@@ -1,0 +1,6 @@
+data/
+sampling_results/
+__pycache__/
+*.pyc
+logs_diffusion/
+datasets/data/

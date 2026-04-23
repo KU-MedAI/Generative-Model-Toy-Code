@@ -1,0 +1,14 @@
+model:
+  checkpoint: /scratch/x3317a09/scripts_origindata/logs_diffusion/targetdiff/checkpoints/84000.pt
+
+data:
+  split: ./data/crossdocked_pocket10_pose_split.pt
+  lmdb: ./data/crossdocked_v1.1_rmsd1.0_pocket10_processed_final.lmdb
+
+sample:
+  seed: 2021
+  num_samples: 100
+  num_steps: 1000
+  pos_only: False
+  center_pos_mode: protein
+  sample_num_atoms: prior
