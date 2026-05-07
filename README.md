@@ -40,7 +40,16 @@ logs_diffusion_full/targetdiff_cjkim_full_gpu/checkpoints/62000.pt
 
 ## 환경
 
-필요 패키지:
+conda 환경 생성:
+
+```bash
+conda env create -f environment.yml
+conda activate targetdiff
+```
+
+`environment.yml`은 CUDA 11.8용 PyTorch/PyG wheel 기준으로 작성됨.
+
+주요 필요 패키지:
 
 ```text
 torch

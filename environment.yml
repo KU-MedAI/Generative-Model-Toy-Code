@@ -1,0 +1,25 @@
+name: targetdiff
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.8
+  - pip
+  - numpy=1.24.*
+  - scipy=1.10.*
+  - rdkit
+  - openbabel
+  - python-lmdb
+  - pyyaml
+  - tqdm
+  - tensorboard
+  - ipykernel
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu118
+      - --find-links https://data.pyg.org/whl/torch-2.2.2+cu118.html
+      - torch==2.2.2+cu118
+      - torch-geometric==2.6.1
+      - torch-scatter
+      - torch-sparse
+      - torch-cluster
+      - torch-spline-conv
