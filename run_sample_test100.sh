@@ -46,7 +46,7 @@ for i in $(seq 0 99); do
   fi
 
   echo "[Sampling] data_id=${i} -> ${out_dir}"
-  "${PYTHON_BIN}" sampling.py "${RUNTIME_CFG}" \
+  "${PYTHON_BIN}" src/sampling.py "${RUNTIME_CFG}" \
     --data_id "${i}" \
     --device cuda:0 \
     --num_samples "${NUM_SAMPLES}" \

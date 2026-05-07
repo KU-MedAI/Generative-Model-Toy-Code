@@ -22,7 +22,7 @@ echo "[Full Pipeline] Starting training"
 echo "[Full Pipeline] CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}"
 echo "[Full Pipeline] TRAIN_MAX_ITERS=${TRAIN_MAX_ITERS}"
 
-"${PYTHON_BIN}" train_diffusion.py \
+"${PYTHON_BIN}" src/train_diffusion.py \
   --config ./config.yml \
   --device cuda \
   --logdir "${TRAIN_LOGDIR}" \
@@ -45,7 +45,7 @@ echo "[Full Pipeline] Starting test set sampling"
 for i in $(seq 0 99); do
   out_dir="${SAMPLE_OUT_ROOT}/data_$(printf '%03d' "${i}")"
   echo "[Full Pipeline] Sampling data_id=${i} -> ${out_dir}"
-  "${PYTHON_BIN}" sampling.py "${RUNTIME_CFG}" \
+  "${PYTHON_BIN}" src/sampling.py "${RUNTIME_CFG}" \
     --data_id "${i}" \
     --device cuda:0 \
     --num_samples "${SAMPLE_NUM_SAMPLES}" \
