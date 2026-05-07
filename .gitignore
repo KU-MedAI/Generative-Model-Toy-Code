@@ -11,6 +11,10 @@ datasets/data/
 logs_diffusion/
 logs_diffusion*/
 *.pt
+!logs_diffusion_full/
+!logs_diffusion_full/targetdiff_cjkim_full_gpu/
+!logs_diffusion_full/targetdiff_cjkim_full_gpu/checkpoints/
+!logs_diffusion_full/targetdiff_cjkim_full_gpu/checkpoints/62000.pt
 
 # Sampling outputs and archived artifacts
 sampling_results/
